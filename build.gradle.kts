@@ -6,4 +6,4 @@ plugins {
     alias(libs.plugins.android.library) apply false
 }
 group = "com.github.shanggeshijidefeng" // 替换为你的 GitHub 用户名或公司名
-version = "0.0.2" // 版本号
+version = "0.0.3" // 版本号

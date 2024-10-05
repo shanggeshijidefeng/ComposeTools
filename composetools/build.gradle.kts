@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -14,7 +15,14 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
     group = "io.github.shanggeshijidefeng" // 替换为你的 GitHub 用户名或公司名
-    version = "0.0.2" // 版本号
+    version = "0.0.3" // 版本号
+
+    val ver: String by project
+
+
+    tasks.named("publishToMavenLocal") {
+        dependsOn("assemble")
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
