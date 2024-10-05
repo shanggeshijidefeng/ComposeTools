@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ComposeTools"
 include(":app")
-include(":composetools")
+include(":mylibrary")
