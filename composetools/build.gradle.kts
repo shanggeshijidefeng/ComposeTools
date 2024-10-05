@@ -1,8 +1,9 @@
 plugins {
-    alias(libs.plugins.android.library)
+    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id ("kotlin-android")
+    alias(libs.plugins.kotlin.compose)
     id("maven-publish")
+
 }
 
 android {
@@ -11,9 +12,8 @@ android {
 
     defaultConfig {
         minSdk = 21
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+     //   consumerProguardFiles("consumer-rules.pro")
     }
     group = "io.github.shanggeshijidefeng" // 替换为你的 GitHub 用户名或公司名
     version = "0.0.3" // 版本号
@@ -57,7 +57,6 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     val composeBom = platform("androidx.compose:compose-bom:2024.09.03")
     implementation(composeBom)
-   implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
     // Compose 核心依赖
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.material3:material3")
