@@ -13,7 +13,8 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
-
+    group = "io.github.shanggeshijidefeng" // 替换为你的 GitHub 用户名或公司名
+    version = "0.0.2" // 版本号
     buildTypes {
         release {
             isMinifyEnabled = false
