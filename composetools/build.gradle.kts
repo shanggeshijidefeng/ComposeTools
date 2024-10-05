@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id ("kotlin-android")
     id("maven-publish")
 }
 
@@ -40,7 +41,9 @@ android {
 
     kotlinOptions {
         jvmTarget = "17"
+
     }
+
 
 }
 
@@ -54,7 +57,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     val composeBom = platform("androidx.compose:compose-bom:2024.09.03")
     implementation(composeBom)
-
+   implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
     // Compose 核心依赖
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.material3:material3")
